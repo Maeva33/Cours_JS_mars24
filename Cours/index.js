@@ -108,9 +108,65 @@ const myIdentity = {
     town: "Bordeaux"
 }
 
-console.log(myIdentity.firstname)
+// console.log(myIdentity.firstname)
 
 const fullnameFromIdentity = myIdentity.firstname + ' ' + myIdentity.lastname
-console.log(fullnameFromIdentity)
-const myHello = `Bonjour je m'appelle` + ` `  + `${myIdentity.firstname}` ` `  ++  `j'ai` + ` `  + `${myIdentity.age}` + ` `  +`et j'habite` +  `${myIdentity.town}`
-console.log(myHello)
+// console.log(fullnameFromIdentity)
+
+const myHello = `Bonjour je m'appelle` +  `${myIdentity.firstname}` +  `j'ai` +  `${myIdentity.age}` + `et j'habite` +  `${myIdentity.town}`
+//console.log(myHello)
+
+// test pour savoir si la personne est un mineur qui habite bordeaux
+
+const personn1 = {
+    firstname: "Pierre",
+    lastname:"Doazan",
+    age: 17,
+    town:"Bordeaux"
+}
+const personn2 = {
+    firstname: "Mathilde",
+    lastname:"Doazan",
+    age: 15,
+    town:"Paris"
+}
+const personn3 = {
+    firstname: "Paul",
+    lastname:"Doazan",
+    age: 35,
+    town:"Marseille"
+}
+
+let personToTest = personn1
+
+
+// if(personnToTest.town === "Bordeaux" && personnToTest.age <18) {
+    // console.log(`${personToTest.firstname} est mineur et habite Bordeaux`)
+// } else {
+    // console.log(`${personToTest.firstname} n'est pas mineur et n'habite pas Bordeaux`)
+// }
+
+// LES TABLEAUX : Array
+let myArray = ["Sara","Alice","Antoine","Stéphane"]
+let myArrayOfObjects = [
+    {name: 'Sara', gender:`f`},
+    {name: 'Alice', gender:`f`},
+    {name: 'Antoine', gender:`m`},
+    {name: 'Stéphane', gender:`m`}
+]
+
+
+
+let fName = myArray [3]
+// exo sarah, alice et stéphane sont partis
+console.log(`${myArray[0]}, ${myArray[1]} et ${myArray[3]} sont partis`)
+
+let objectToTest = myArrayOfObjects [0]
+let gone ="parti"
+
+if(objectToTest.gender === "f") {
+    gone += `e`
+};
+
+console.log(`${objectToTest.name} est ${gone} !`)
+
