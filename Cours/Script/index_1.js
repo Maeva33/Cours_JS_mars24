@@ -89,4 +89,93 @@ if(arr[index].electric ===false){
     isElectricSentence = "n'est pas électrique"
 } 
 // console.log(isElectricSentence)
-console.log(`le modèle ${arr[index].model} ${arr[index].year} de la marque ${arr[index].brand} ${isElectricSentence}`)
+// console.log(`le modèle ${arr[index].model} ${arr[index].year} de la marque ${arr[index].brand} ${isElectricSentence}`)
+ 
+// LES BOUCLES
+// Syntax: mettre un indice, tant qu'il est inf à 10, à chaque passage je rajoute 1 à cet index (incrémentation)
+ 
+// console.log('before loop')
+
+// let sum = 0
+
+// for(let index = 0; index < 50; index ++){
+//     if(index % 3=== 0 ) {
+//         console.log('multiple de 3 :' + index);
+//     }
+// }
+
+
+// let sum = 0 
+
+// for(let index = 0; index < 5; index ++) {
+//     sum += index
+//  }
+//  console.log(sum)
+    
+// console.log('📌before loop')
+
+// Exo calculer la somme des nbr impair:
+
+// let sum = 0;
+
+// for(let index = 0; index < 20; index ++) {
+//     if (index % 2 === 1) {
+//     sum += index
+//     }
+
+//  }
+//  console.log(`📐` + sum)
+
+//  let letters = ["p","f","t","g"]
+//  console.log(letters.length)
+
+//  for(let index = 0; index < letters.length; index++) {
+//     console.log(letters[index])
+//  }
+
+//  calculer et afficher la somme des nombres supérieurs à 10
+let numbers = [12,4,67,32,11,3,1,14]
+
+let sum = 0;
+
+// for (let index = 0; index < numbers.length; index++) {
+//    if (numbers[index] > 10) {
+//     sum += numbers[index];
+//    }
+//    }
+//    console.log('La somme des nombres 🚀supérieurs à 10 est : ' + sum);
+ 
+// Exo difficile : Calculer et afficher la somme des nombres supérieurs à la moyenne
+// une premiere boucle for pour calculer la moyenne, puis une seconde boucle for pour faire la comparaison avec cette moyenne.
+
+
+// // Moyenne
+// for (let i = 0; i < numbers.length; i++) {
+//      (sum += numbers[i]);
+// }
+// let moy = sum / numbers.length;
+
+//     console.log(result)
+
+//     //SECONDE BOUCLE : 
+// let total = 0
+// for(let i = 0; i < numbers.length; i++) {
+//    if (total += numbers[i]); {
+//     }
+// }
+
+//MANIPULATION DU DOM :
+const stripes = document.querySelectorAll('.stripe')
+// récupérer toutes les div en tablo; 
+
+// for(let i = 0; i <stripes.lentgh; i++){
+//     stripes[i].style.backgroundColor= "green";
+// }
+
+for (let i = 0; i < stripes.length; i++) {
+    if (i % 2 === 0) {
+        stripes[i].style.background = 'linear-gradient(to right, blue, green)'; 
+    } else {
+        stripes[i].style.background = 'linear-gradient(to right, red, yellow)'; 
+    } 
+}
