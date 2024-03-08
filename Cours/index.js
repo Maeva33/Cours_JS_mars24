@@ -1,3 +1,6 @@
+
+// VARIABLES :
+
 // alert('Salut tout le monde')
 
 // console.log("Hello console")
@@ -157,16 +160,19 @@ let myArrayOfObjects = [
 
 
 
-let fName = myArray [3]
+// let fName = myArray [3]
 // exo sarah, alice et stéphane sont partis
-console.log(`${myArray[0]}, ${myArray[1]} et ${myArray[3]} sont partis`)
+// console.log(`${myArray[0]}, ${myArray[1]} et ${myArray[3]} sont partis`)
 
-let objectToTest = myArrayOfObjects [0]
-let gone ="parti"
+// let objectToTest = myArrayOfObjects [0]
+// let gone ="parti"
 
-if(objectToTest.gender === "f") {
+// if(objectToTest.gender === "f") {
     gone += `e`
-};
+// };
 
-console.log(`${objectToTest.name} est ${gone} !`)
+// console.log(`${objectToTest.name} est ${gone} !`)
+
+
+
 
