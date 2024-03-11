@@ -254,5 +254,78 @@ let resultMinimum = getMinimum(numbers_a)
 //console.log(resultMinimum)
 
 // Ecrire la fonction getAverage()
+// Cette fonction prend en paramètre un tableau de nombres et retourne la moyenne de ces nombres
+
+function getAverage(arrNumbers){
+    let total = 0
+    for(let i = 0; i < arrNumbers.length; i++){
+        total += arrNumbers[i]
+    }
+
+    //! Arrondir à 2 chiffres après la virgule
+    // return Math.round((total / arrNumbers.length) * 100) / 100
+    return total / arrNumbers.length
+}
+
+let resultAverage = getAverage(numbers_a)
+//console.log(resultAverage)
+
+const person_1 = {
+    name: "Jean",
+    size: 1.78,
+    weight: 75
+}
+
+const person_2 = {
+    name: "Marc",
+    size: 1.92,
+    weight: 86
+}
+
+// Formule de l'IMC : poids / taille * taille
+
+
+function getIMC(person){
+    return person.weight / (person.size * person.size)
+}
+
+let resultIMC = getIMC(person_1)
+console.log(resultIMC)
+
+//Ecrire la fonction qui retoure l'imc d'une personne
+
+function getIMC(person){
+    return person.weight / (person.size * person.size)
+}
+
+let resultIMC_1 = getIMC(person_1)
+let resultIMC_2 = getIMC(person_2)
+
+//console.log(resultIMC_1, resultIMC_2)
+
+//Afficher en concole "Un tel a un IMC "
+
+function getIMC(person){
+    return person.weight / (person.size * person.size)
+}
+
+function displayIMC(person){
+    let imc = getIMC(person)
+    console.log(person.name + " a un IMC de " + imc)
+}
+
+displayIMC(person_1)
+displayIMC(person_2)
+
+
+
+
+
+
+
+
+
+
+
 
 
