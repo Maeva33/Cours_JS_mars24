@@ -38,7 +38,7 @@
 // let numbers = [3,1,21,13,8]
 // let total = 0
 
-// // A l'aide d'un parcours de tableau, calculer la somme totale du tableau
+// A l'aide d'un parcours de tableau, calculer la somme totale du tableau
 // for(let index = 0; index < numbers.length; index++){
 //     total += numbers[index]
 // }
@@ -46,8 +46,8 @@
 
 // A l'aide d'un parcours de tableau, calculer la somme de la premiere moitié du tableau, et de la somme de la deuxième moitié du tableau
 
-// let total_1 = 0
-// let total_2 = 0
+let total_1 = 0
+let total_2 = 0
 
 // for(let index = 0; index < numbers.length; index++){
 //     if(index < numbers.length / 2){
@@ -57,7 +57,7 @@
 //     }
 // }
 
-//console.log(total_1, total_2)
+// console.log(total_1, total_2)
 
 let people = [
     {
@@ -143,12 +143,12 @@ peopleWithCar = peopleWithCar.slice(0, -2)
 function logName(parameter){
     //  console.log("Bonjour " + parameter + " Vous avez gafné un million de dollars ! ")
  }
-// Cela peremet d'afficher le parametre, il n'y à rien dans la console pour l'instant, car on a pas défini parameter
+// Cela permet d'afficher le parametre, il n'y à rien dans la console pour l'instant, car on a pas défini parameter
 
 //Exécution de la fonction
-logName("Dann")
-logName("Sami")
-logName("Karim")
+// logName("Dann")
+// logName("Sami")
+// logName("Karim")
 
 // add(3, 4)
 // add(200, 41)
@@ -158,22 +158,22 @@ logName("Karim")
 //     console.log (param1 + param2)
 // }
 
-// function addWithReturn (param1, param2){
-//     return param1 + param2
-// }
-// let resultAddition = addWithReturn(5, 6)
+function addWithReturn (param1, param2){
+    return param1 + param2
+}
+let resultAddition = addWithReturn(5, 6)
 
-// let names_1 = ["Dann", "Sami", "Karim"]
+let names_1 = ["Dann", "Sami", "Karim"]
 
-// function getAllNamesInSentence(arrParameter){
-//     let sentence = ""
-//     for(let i = 0; i < arrParameter.length; i++){
-//         sentence += arrParameter[i] + ", "
-//     }
-//     return sentence
-// }
+function getAllNamesInSentence(arrParameter){
+    let sentence = ""
+    for(let i = 0; i < arrParameter.length; i++){
+        sentence += arrParameter[i] + ", "
+    }
+    return sentence
+}
 
-// let result = getAllNamesInSentence([names_1])
+let result = getAllNamesInSentence([names_1])
 
 
 let town = ['Bordeaux', 'Talence', 'Pessac', 'Mérignac']
@@ -189,12 +189,12 @@ function getAllNamesInSentence(arrParameter){
     return sentence
 }
 
-let result = getAllNamesInSentence(town)
-console.log(result)
+// let result = getAllNamesInSentence(town)
+// console.log(result)
 
-let resultFromArrayOfObject = getAllNamesInSentence(people)
-console.log(resultFromArrayOfObject)
-// 'Jean - Mathilde - Adèle - Johanna'
+// let resultFromArrayOfObject = getAllNamesInSentence(people)
+// console.log(resultFromArrayOfObject)
+
 function getAllNamesInSentence(arr){
     let sentence = ""
     for(let i = 0; i < arr.length; i++){
@@ -203,13 +203,56 @@ function getAllNamesInSentence(arr){
     return sentence
 }
 
+// Exercice difficile
+// La fonction retourne un tableau des noms des personnes qui n'ont pas de voiture
+
+function getPeopleWithoutCar(arr){
+    let peopleWithoutCar = []
+    for(let i = 0; i < arr.length; i++){
+        if(!arr[i].hasCar){
+            peopleWithoutCar.push(arr[i].name)
+        }
+    }
+    return peopleWithoutCar
+}
+
+let resultPeopleWithoutCar = getPeopleWithoutCar(people)
+//console.log(resultPeopleWithoutCar)
+
+//Exercice, trouver le minimum
+let numbers_a = [34, 12, 23, 5, 54, 6]
+let minimum = numbers_a[0]
+
+for(let i = 0; i <numbers_a.length; i++){
+    if(i == 0){
+        minimum = numbers_a[i]
+    }else if(numbers_a[i] < minimum){
+        minimum = numbers_a[i]
+    }
+}   
+console.log(minimum)
+
+//Exercice difficile : Avec le tableau people[], afficher le nom de la personne la plus jeune :
 
 
 
+// Exercice, factoriser le script avec une fonction getMinimun()qui retourne ma valeur minimale d'un tableau
 
+function getMinimum(arrNumbers){
+    let minimum = arrNumbers[0]
+    for(let i = 0; i < arrNumbers.length; i++){
+        if(i == 0){
+            minimum = arrNumbers[i]
+        }else if(arrNumbers[i] < minimum){
+            minimum = arrNumbers[i]
+        }
+    }
+    return minimum
+}
 
+let resultMinimum = getMinimum(numbers_a)
+//console.log(resultMinimum)
 
-
-
+// Ecrire la fonction getAverage()
 
 
