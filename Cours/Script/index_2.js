@@ -141,7 +141,7 @@ peopleWithCar = peopleWithCar.slice(0, -2)
 // Déclaration d'une fonction et on lui donne un nom
 //Exemple :
 function logName(parameter){
-    //  console.log("Bonjour " + parameter + " Vous avez gafné un million de dollars ! ")
+    //  console.log("Bonjour " + parameter + " Vous avez gagné un million de dollars ! ")
  }
 // Cela permet d'afficher le parametre, il n'y à rien dans la console pour l'instant, car on a pas défini parameter
 
