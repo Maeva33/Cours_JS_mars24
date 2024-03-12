@@ -95,7 +95,7 @@ function getIMC(param) {
 
 function logIMC(person) {
     let imc = getIMC(person)
-    console.log(`${person.name} a un IMC de ${imc}`)
+    //console.log(`${person.name} a un IMC de ${imc}`)
 }
 
 // Exercice++
@@ -109,23 +109,56 @@ const people = [person_1, person_2, person_3, person_4]
 const result = biggestIMC(people)
 // 3 LA FONCTION VA RECUPERER L'IMC LE PLUS ELEVE DU TABLEAU
 function biggestIMC(arr) {
-    // 4 JE VAIS DECLARER UNE VARIABLE BIGGEST QUI VA STOCKER L'OBJET
-    let biggest = arr[0]
+    // 4 JE VAIS DECLARER 2 VARIABLES QUI VA STOCKER L'OBJET
+    let maxImc= getIMC(arr[0])
+    let maxImcPerson = arr[0]
+
     // 5 JE VAIS PARCOURIR MON TABLEAU D'OBJETS
-    for(let i = 0; i < arr.length; i++) {
-        // 6 JE VAIS RECUPERER L'IMC
-        let imc = getIMC(arr[i])
-        // 7 SI L'IMC EST PLUS GRAND QUE GETIMC(BIGGEST)   
-        if (imc > getIMC(biggest)) {
-            // 8 JE VAIS LE STOCKER DANS LA VARIABLE BIGGEST    
-            biggest = arr[i]
-        }
+    for(let i = 1; i < arr.length; i++) {
+        // 6 SI L'ELEMENT DU TABLEAU EST PLUS GRAND QUE LE MAXIMUM   
+        if (getIMC(arr[i]) > maxImc) {
+            // 7 JE VAIS LE STOCKER DANS LA VARIABLE MAXIMUM 
+            maxImc = getIMC(arr[i])
+            maxImcPerson = arr[i]
     }
-    // 9 JE VAIS RETOURNER L'OBJET BIGGEST
-    return biggest
+    // 9 JE VAIS RETOURNER LE MAXIMUM
+    return maxImcPerson
+    }
 }
 // 10 AFFICHER LE RESULTAT EN CONSOLE
-console.log(result)
+//console.log()
+
+// INTERRACTION AVEC LE DOM
+// EXECUTER LA FONCTION QUERYSELECTOR
+//! ATTENTION DANS LE SELECTOR(CLASS OU ID) 
+const btnBlue = document.querySelector(".btn-blue")
+btnBlue.textContent = "Cliquez-moi"
+btnBlue.style.color = "white"
+
+// PHRASE POUR EXPLIQUER LE CODE : Lorsqu'un clic de souris se produit sur le bouton avec la class 'btnBlue', exécute la fonction 'onBtnClick'". Assurez-vous simplement que la fonction onBtnClick est définie quelque part dans votre code pour qu'elle puisse être exécutée correctement.
+// EXPLIQUER add.EventListener = C'est une méthode en JavaScript qui permet d'ajouter un écouteur d'événement à un élément HTML. Cela signifie que le code réagit à un événement particulier sur cet élément.
+// click = événement de clic de souris
+btnBlue.addEventListener("click", onBtnClick)
+
+
+// Exercice quand on clique sur le bouton, changer le texte du bouton en "Clic OK" :
+let btnClick = false 
+
+function onBtnClick() {
+   if (btnClick) {
+         btnClick = false
+       btnBlue.textContent = "Cliquez-moi"
+   } else {
+       btnClick = true
+       btnBlue.textContent = "Clic OK"
+   }
+}
+
+
+
+
+
+
 
 
 
