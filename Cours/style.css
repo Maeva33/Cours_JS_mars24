@@ -25,7 +25,11 @@
     font-family: "Roboto";
     font-weight: 600;
     cursor: pointer;
+    transition: transform 1s;
 }
+
+
+
 
 .btn-blue {
     background-color: blue;
@@ -38,3 +42,4 @@
 .btn-red {
     background-color: red;
 }
+

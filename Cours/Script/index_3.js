@@ -141,54 +141,93 @@ btnBlue.style.color = "white"
 btnBlue.addEventListener("click", onBtnClick)
 
 
-// Exercice quand on clique sur le bouton, changer le texte du bouton en "Clic OK" :
-let btnClick = false 
+// // Exercice quand on clique sur le bouton, changer le texte du bouton en "Clic OK" :
+// let btnClick = false 
 
-function onBtnClick() {
-   if (btnClick) {
-         btnClick = false
-       btnBlue.textContent = "Cliquez-moi"
-   } else {
-       btnClick = true
-       btnBlue.textContent = "Clic OK"
-   }
+// function onBtnClick() {
+//    if (btnClick) {
+//          btnClick = false
+//        btnBlue.textContent = "Cliquez-moi"
+//    } else {
+//        btnClick = true
+//        btnBlue.textContent = "Clic OK"
+//    }
+// }
+
+// //Même chose avec un bouton rouge
+// const btnRed = document.querySelector(".btn-red")
+// btnRed.textContent = "Cliquez-moi"
+// btnRed.style.color = "white"
+// btnRed.addEventListener("click", onBtnClickRed)
+
+// let btnClickRed = false
+
+// function onBtnClickRed() {
+//     if (btnClickRed) {
+//         btnClickRed = false
+//         btnRed.textContent = "Cliquez-moi"
+//     } else {
+//         btnClickRed = true
+//         btnRed.textContent = "Clic OK"
+//     }
+// }
+
+// //Même chose avec un bouton jaune 
+// const btnYellow = document.querySelector(".btn-yellow")
+// btnYellow.textContent = "Cliquez-moi"
+// btnYellow.style.color = "white"
+// btnYellow.addEventListener("click", onBtnClickYellow)
+
+// let btnClickYellow = false
+
+// function onBtnClickYellow() {
+//     if (btnClickYellow) {
+//         btnClickYellow = false
+//         btnYellow.textContent = "Cliquez-moi"
+//     } else {
+//         btnClickYellow = true
+//         btnYellow.textContent = "Clic OK"
+//     }
+// }
+
+ //INTERACTION AVEC LE DOM
+ const btnsArray = document.querySelectorAll(".btn")
+const container = document.querySelector(".container")
+
+for (let i = 0; i < btnsArray.length; i++) {
+    btnsArray[i].isClicked = false
+    btnsArray[i].addEventListener("click", onBtnClick)
 }
 
-//Même chose avec un bouton rouge
-const btnRed = document.querySelector(".btn-red")
-btnRed.textContent = "Cliquez-moi"
-btnRed.style.color = "white"
-btnRed.addEventListener("click", onBtnClickRed)
-
-let btnClickRed = false
-
-function onBtnClickRed() {
-    if (btnClickRed) {
-        btnClickRed = false
-        btnRed.textContent = "Cliquez-moi"
+function onBtnClick(e) {
+    e.currentTarget.isClicked = !e.currentTarget.isClicked
+    container.style.backgroundColor = e.currentTarget.textContent
+    if (e.currentTarget.isClicked) {
+        e.currentTarget.style.transform = "rotate(180deg)"
     } else {
-        btnClickRed = true
-        btnRed.textContent = "Clic OK"
+        e.currentTarget.style.transform = "rotate(0deg)"
     }
 }
 
-//Même chose avec un bouton jaune 
-const btnYellow = document.querySelector(".btn-yellow")
-btnYellow.textContent = "Cliquez-moi"
-btnYellow.style.color = "white"
-btnYellow.addEventListener("click", onBtnClickYellow)
+//Exercice : quand on clique sur un des boutons, changer la couleur de fond du container en aléatoire
+//pour générer la fonction aléatoire : Math.random() ==> 0 < nb < 1
+//En css, on passera une couleur en rgb(0, 0, 0) 
 
-let btnClickYellow = false
+// CHANGER LA COULEUR DE FOND DU CONTAINER EN ALEATOIRE
+const btnsArray = document.querySelectorAll(".btn")
+const container = document.querySelector(".container")
 
-function onBtnClickYellow() {
-    if (btnClickYellow) {
-        btnClickYellow = false
-        btnYellow.textContent = "Cliquez-moi"
-    } else {
-        btnClickYellow = true
-        btnYellow.textContent = "Clic OK"
-    }
+//GENERER LA FONCTION ALEATOIRE : 
+Math.random()
+
+
+
+
+
+
+
 }
+
 
 
 
