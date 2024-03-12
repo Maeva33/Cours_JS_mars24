@@ -154,6 +154,44 @@ function onBtnClick() {
    }
 }
 
+//Même chose avec un bouton rouge
+const btnRed = document.querySelector(".btn-red")
+btnRed.textContent = "Cliquez-moi"
+btnRed.style.color = "white"
+btnRed.addEventListener("click", onBtnClickRed)
+
+let btnClickRed = false
+
+function onBtnClickRed() {
+    if (btnClickRed) {
+        btnClickRed = false
+        btnRed.textContent = "Cliquez-moi"
+    } else {
+        btnClickRed = true
+        btnRed.textContent = "Clic OK"
+    }
+}
+
+//Même chose avec un bouton jaune 
+const btnYellow = document.querySelector(".btn-yellow")
+btnYellow.textContent = "Cliquez-moi"
+btnYellow.style.color = "white"
+btnYellow.addEventListener("click", onBtnClickYellow)
+
+let btnClickYellow = false
+
+function onBtnClickYellow() {
+    if (btnClickYellow) {
+        btnClickYellow = false
+        btnYellow.textContent = "Cliquez-moi"
+    } else {
+        btnClickYellow = true
+        btnYellow.textContent = "Clic OK"
+    }
+}
+
+
+
 
 
 
