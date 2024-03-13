@@ -37,10 +37,26 @@ btnDivs[randomPosition].textContent = correctResult
 
 resultDiv.textContent = "..."
 
+
+// Implémenter la fonction OnBtnClick avec le test du résultat correcte et l'affichage dans la balise result :
+
 function onBtnClick(e) {
     console.log(e.currentTarget.textContent)
 }
-
 function getRandomBetweenNumbers(min, max) {
     return Math.round((Math.random() * (max - min)) + min)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
