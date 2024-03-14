@@ -1,0 +1,32 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    user-select: none;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7986b6;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    border: greenyellow 1px solid;
+    background-color: black;
+   
+}
+
+.row {
+    display: flex;
+}

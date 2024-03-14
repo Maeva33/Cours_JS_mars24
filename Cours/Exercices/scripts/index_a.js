@@ -72,21 +72,55 @@ for (let i = 0; i < pizzas.length; i++) {
 
 let maxPizza = pizzas[0]
 
-// En paramètre, un tableau de pizzas
+
 function getMostExpensivePizza() {
-
 }
-
 for (let i = 1; i < pizzas.length; i++) {
     if (pizzas[i].price > maxPizza.price) {
         maxPizza = pizzas[i]
     }
 }
-
 console.log(`La ${maxPizza.name} a pour ingrédients ${maxPizza.ingredients} et coûte ${maxPizza.price}`)
 
+// En paramètre, un tableau de pizzas, on retourne la pizza la plus chère
+const mostExpPizza = getMostExpensivePizza(pizzas)
+console.log(mostExpPizza.name)
+
+// En paramètre, un tableau de pizzas, on retourne la pizza la plus chère
+function getMostExpensivePizza(arrPizzas) {
+    let maxPizza = arrPizzas[0]
+
+    for (let i = 1; i < arrPizzas.length; i++) {
+        if (arrPizzas[i].price > maxPizza.price) {
+            maxPizza = arrPizzas[i]
+        }
+    }
+
+    return maxPizza
+}
 
 
+// console.log(`La ${maxPizza.name} a pour ingrédients ${maxPizza.ingredients} et coûte ${maxPizza.price}`)
+
+import pizzas from "../data/pizzas.json" assert {type: "json"}
+import pizzas_2 from "../data/pizzas_2.json" assert {type: "json"}
+
+// Ecrire une fonction qui cherche la pizza la plus chère parmi 2 tableaux passés en paramètre
+// Array.push() => la méthode qui permet d'ajouter un élément à la fin d'un tableau
+const ultimate = getUltimatePizza(pizzas, pizzas_2)
+console.log(ultimate.name)
+
+function getUltimatePizza(arr1, arr2) {
+    let totalArray = []
+    for (let i = 0; i < arr1.length; i++) {
+        totalArray.push(arr1[i])
+    }
+    for (let i = 0; i < arr2.length; i++) {
+        totalArray.push(arr2[i])
+    }
+
+    return getMostExpensivePizza(totalArray)
+}
 
 
 
