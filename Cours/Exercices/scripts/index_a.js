@@ -1,53 +1,53 @@
-const pizzas = [
-    {
-        name: 'Margherita',
-        price: 11.50,
-        ingredients: ['mozzarella', 'tomate', 'basilic ', "huile d'olive"],
-        baseTomate: true
-    },
-    {
-        name: 'Regina',
-        price: 12,
-        ingredients: ['mozzarella', 'tomate', 'origan', 'jambon', 'champignons'],
-        baseTomate: true
-    },
-    {
-        name: '4 saisons',
-        price: 15,
-        ingredients: ['artichaut', 'courgette', 'poivron', 'mozzarella', 'oignon rouge'],
-        baseTomate: true
-    },
-    {
-        name: 'Napolitaine',
-        price: 14,
-        ingredients: ['tomate', 'mozzarella', 'anchois', 'olives noires', 'origan'],
-        baseTomate: true
-    },
-    {
-        name: '4 fromages',
-        price: 16,
-        ingredients: ['tomate', 'mozzarella', 'emmental', 'comté', 'roquefort'],
-        baseTomate: true
-    },
-    {
-        name: 'Montagnarde',
-        price: 19,
-        ingredients: ['mozzarella', 'reblochon', 'gruyère', 'oignon', 'champignon'],
-        baseTomate: false
-    },
-    {
-        name: 'Chèvre-miel',
-        price: 18,
-        ingredients: ['mozzarella', 'chèvre', 'miel'],
-        baseTomate: false
-    },
-    {
-        name: 'Hawaïenne',
-        price: 17,
-        ingredients: ['mozzarella', 'tomate', 'jambon', 'ananas'],
-        baseTomate: true
-    }
-]
+// const pizzas = [
+//     {
+//         name: 'Margherita',
+//         price: 11.50,
+//         ingredients: ['mozzarella', 'tomate', 'basilic ', "huile d'olive"],
+//         baseTomate: true
+//     },
+//     {
+//         name: 'Regina',
+//         price: 12,
+//         ingredients: ['mozzarella', 'tomate', 'origan', 'jambon', 'champignons'],
+//         baseTomate: true
+//     },
+//     {
+//         name: '4 saisons',
+//         price: 15,
+//         ingredients: ['artichaut', 'courgette', 'poivron', 'mozzarella', 'oignon rouge'],
+//         baseTomate: true
+//     },
+//     {
+//         name: 'Napolitaine',
+//         price: 14,
+//         ingredients: ['tomate', 'mozzarella', 'anchois', 'olives noires', 'origan'],
+//         baseTomate: true
+//     },
+//     {
+//         name: '4 fromages',
+//         price: 16,
+//         ingredients: ['tomate', 'mozzarella', 'emmental', 'comté', 'roquefort'],
+//         baseTomate: true
+//     },
+//     {
+//         name: 'Montagnarde',
+//         price: 19,
+//         ingredients: ['mozzarella', 'reblochon', 'gruyère', 'oignon', 'champignon'],
+//         baseTomate: false
+//     },
+//     {
+//         name: 'Chèvre-miel',
+//         price: 18,
+//         ingredients: ['mozzarella', 'chèvre', 'miel'],
+//         baseTomate: false
+//     },
+//     {
+//         name: 'Hawaïenne',
+//         price: 17,
+//         ingredients: ['mozzarella', 'tomate', 'jambon', 'ananas'],
+//         baseTomate: true
+//     }
+// ]
 
 //Afficher dans la console une chaîne de caractere de tous les ingrédients de la dernière pizza : "mozzarella, tomate, jambon, ananas" avec une boucle for:
 
@@ -68,5 +68,22 @@ for (let i = 0; i < ingredients.length; i++) {
         // Si ce n'est pas le dernier ingrédient, ajoute l'ingrédient suivi d'une virgule et d'un espace à la variable result.
     }
 }
-console.log(result);
+// console.log(result);
 // Affiche la chaîne result dans la console une fois que la boucle est terminée.
+
+//! CORRECTION DE PAUL :
+
+import pizzas from "../data/pizzas.json" assert {type: "json"}
+
+let result = ""
+const ingredientsArray = pizzas[pizzas.length - 1].ingredients
+
+for (let i = 0; i < ingredientsArray.length; i++) {
+    if (i !== ingredientsArray.length - 1) {
+        result += ingredientsArray[i] + ", "
+    } else {
+        result += ingredientsArray[i] + " !"
+    }
+}
+
+console.log(result)
