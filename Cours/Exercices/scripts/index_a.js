@@ -35,4 +35,62 @@ for (let i = 0; i < ingredientsArray.length; i++) {
     }
 }
 
-console.log(result)
+// console.log(result)
+
+// Afficher le nom de la pizza la plus chère :
+
+let maxPrice = [0] 
+let pizzaName = ""
+for (let i = 0; i < pizzas.length; i++) {
+    if (pizzas[i].price > maxPrice) {
+        maxPrice = pizzas[i].price
+        pizzaName = pizzas[i].name
+    }
+}
+//console.log(pizzaName)
+
+//TODO Initialisation des variables :
+
+// TODO Nous initialisons deux variables : maxPrice qui stockera le prix maximum trouvé et pizzaName qui stockera le nom de la pizza correspondant à ce prix maximum. maxPrice est initialisé à [0] et pizzaName est initialisé à une chaîne vide "".
+// TODO Boucle de parcours des pizzas :
+
+//TODO  Une boucle for pour parcourir toutes les pizzas dans le tableau pizzas.
+// TODO La condition i < pizzas.length garantit que  chaque pizza est parcourue dans le tableau.
+
+// TODO Vérification du prix maximum :
+// TODO Dans chaque itération de la boucle, le prix de la pizza actuelle est comparée (pizzas[i].price) avec le prix maximum trouvé jusqu'à présent (maxPrice).
+
+//TODO  Si le prix de la pizza actuelle est supérieur au prix maximum actuel, cela signifie que nous avons trouvé une nouvelle pizza avec un prix plus élevé.
+//TODO  Nous mettons donc à jour maxPrice avec le prix de la pizza actuelle et pizzaName avec le nom de cette pizza.
+
+//TODO  Affichage du nom de la pizza la plus chère :
+// TODO Une fois que la boucle a parcouru toutes les pizzas et a trouvé la pizza la plus chère, nous affichons le nom de cette pizza dans la console en utilisant console.log(pizzaName).
+
+// TODO En résumé, ce code parcourt toutes les pizzas pour trouver celle avec le prix maximum, puis affiche le nom de cette pizza.
+
+// ! CORRECTION DE PAUL :
+
+let maxPizza = pizzas[0]
+
+// En paramètre, un tableau de pizzas
+function getMostExpensivePizza() {
+
+}
+
+for (let i = 1; i < pizzas.length; i++) {
+    if (pizzas[i].price > maxPizza.price) {
+        maxPizza = pizzas[i]
+    }
+}
+
+console.log(`La ${maxPizza.name} a pour ingrédients ${maxPizza.ingredients} et coûte ${maxPizza.price}`)
+
+
+
+
+
+
+
+
+
+
