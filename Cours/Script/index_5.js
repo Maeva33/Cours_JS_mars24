@@ -1,1 +1,2 @@
-console.log("hello from index_5.js")
+console.log('start day 6')
+
