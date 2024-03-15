@@ -121,18 +121,18 @@ const myFunction = (e) => {
     console.log(e.currentTarget)
 }
 
-container.addEventListener('click', () => { })
+// container.addEventListener('click', () => { })
 
-const names = pizzas.map((element) => {
-    let result
-    if (element.baseTomate) {
-        result = "Pizza a la tomate : " + element.name
-    } else {
-        result = "Pizza a la creme fraiche : " + element.name
-    }
+// const names = pizzas.map((element) => {
+//     let result
+//     if (element.baseTomate) {
+//         result = "Pizza a la tomate : " + element.name
+//     } else {
+//         result = "Pizza a la creme fraiche : " + element.name
+//     }
 
-    return result
-})
+//     return result
+// })
 
 // console.log(pizzas.map(el => el.name))
 console.log(pizzas.map(el => el.baseTomate ? "Pizza a la tomate : " + el.name : "Pizza a la creme fraiche : " + el.name))
@@ -158,6 +158,41 @@ const filteredNumbers = numbers.filter(element => element < 10)
 console.log(filteredNumbers)
 
 // a l'aide d'un filter, refaire l'exercice pour filtrer les pizzas avec tomate
+
+// const pizzasWithTomato = pizzas.filter(el => el.baseTomate)
+// const pizzasTomatoNames = pizzasWithTomato.map(el => el.name)
+
+console.log(pizzas.filter(el => el.baseTomate).map(el => el.name))
+
+let person1 = {
+    name: 'Max',
+    vehicle: 'car',
+    town: 'Paris'
+}
+
+let person2 = {
+    name: 'Nathalie',
+    vehicle: 'bike',
+    town: 'Bordeaux'
+}
+
+let person3 = {
+    name: 'Cathy',
+    vehicle: 'car',
+    town: 'Lyon'
+}
+
+const people = [person1, person2, person3]
+
+// a l'aide de la methode filter() et map(), afficher les noms des gens qui ont une voiture
+
+let peopleWithCar = people.filter(el => el.vehicle === 'car')
+let peopleWithCar = peopleWithCar.map(el => el.name)
+
+console.log(peopleWithCar)
+
+
+
 
 
 
