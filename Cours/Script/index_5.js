@@ -1,2 +1,2 @@
-console.log('start day 6')
+// console.log('start day 6')
 
