@@ -63,9 +63,34 @@ const numbersByTenExceptLast = numbers.map((num, index, arr) => {
     }
 })
 
-console.log(numbersByTenExceptLast)
+// console.log(numbersByTenExceptLast)
 
- 
+ // calculer la somme totale avec la méthode ForEach ( diff avec map : map retourne un tableau, forEach ne retourne rien) : 
+ let total = 0
+    const resArr = numbers.forEach((el,index,arr) => {
+        total += el
+    })
+    // console.log(total, resArr)
+
+    // Travail sur les variables
+let nb1 = 10
+
+// assignation par valeur, par défaut pour les VARIABLES PRIMITIVES
+let nb2 = nb1
+
+nb2 += 3
+
+console.log(nb1, nb2)
+
+let arr1 = ["Paul", "Pierre"]
+// assignation par référence, par défaut pour les VARIABLES COMPLEXES
+let arr2 = arr1
+
+arr2.push("Mathilde")
+arr1.push('Simon')
+
+console.log(arr1, arr2)
+
  
 
 
