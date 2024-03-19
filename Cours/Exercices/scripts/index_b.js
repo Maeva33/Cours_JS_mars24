@@ -115,9 +115,20 @@ function getMovieYear (arr = movies, year) {
 //!console.log(resultArr)
 
 //!function getMoviesByYear(arr, yearParam) {
+ //!   const filteredArray = arr.filter(el => {
+        //! return el.year === yearParam
 
 //!}
 
+ // const emptyArray = []
 
+    // for (let i = 0; i < mappedArray.length; i++) {
+    //     for (let j = 0; j < mappedArray[i].length; j++) {
+    //         emptyArray.push(mappedArray[i][j])
+    //     }
+    // }
+
+    // return emptyArray;
+// }
 
 // 3. Ecrire une fonction qui prend en parametre un realisateur et un tableau (movies), et qui retourne un nouveau tableau de tous les titres de films de ce realisateur
